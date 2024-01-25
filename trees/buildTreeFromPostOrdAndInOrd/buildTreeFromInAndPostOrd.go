@@ -17,10 +17,10 @@ func buildTree(inorder []int, postorder []int) *TreeNode {
 	root := &TreeNode{Val: rootVal}
 
 	// Find the root in inorder to divide into left and right subtrees
-	rootIndexInInorder := find(inorder, rootVal)
+	index := find(inorder, rootVal)
 
-	root.Left = buildTree(inorder[:rootIndexInInorder], postorder[:rootIndexInInorder])
-	root.Right = buildTree(inorder[rootIndexInInorder+1:], postorder[rootIndexInInorder:len(postorder)-1])
+	root.Left = buildTree(inorder[:index], postorder[:index])
+	root.Right = buildTree(inorder[index+1:], postorder[index:len(postorder)-1])
 
 	return root
 }
