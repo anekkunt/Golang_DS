@@ -17,27 +17,25 @@ Partition is done recursively on each side of the pivot after the pivot is place
 
 // partition rearranges the elements based on the pivot
 func partition(arr []int, low, high int) int {
-	pivot := arr[high]
-	start := low
-	end := high - 1
+	pivot := arr[low]
+	start := low + 1
+	end := high
 
-	for start < end {
-		for start < end && arr[start] <= pivot {
+	for start <= end {
+		for start <= end && arr[start] <= pivot {
 			start++
 		}
-		for start < end && arr[end] > pivot {
+		for start <= end && arr[end] > pivot {
 			end--
 		}
-		if start < end {
+		if start <= end {
 			arr[start], arr[end] = arr[end], arr[start]
 		}
 	}
-	if arr[start] > pivot {
-		arr[start], arr[high] = arr[high], arr[start]
-	}
 
-	return start
+	arr[low], arr[end] = arr[end], arr[low]
 
+	return end
 }
 
 // quickSort sorts the elements using Quick Sort algorithm
