@@ -8,3 +8,11 @@
     4. construct tree from post-order and in-order
     5. mirror tree
     6. two trees are identical or not
+
+    two sum 
+    tree sum
+    meetingSchudule
+    stock gain 
+    max robbery
+    print seq num odd and eben goroutinue
+
