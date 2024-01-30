@@ -10,9 +10,12 @@
     6. two trees are identical or not
 
     two sum 
-    tree sum
+    tree sum(all tuples)
     meetingSchudule
     stock gain 
     max robbery
     print seq num odd and eben goroutinue
+    dequeue
+
+    rest API implentation , for book store
 
